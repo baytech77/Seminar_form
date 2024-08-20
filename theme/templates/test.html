@@ -1,0 +1,63 @@
+
+{% extends 'base.html' %}
+{% load crispy_forms_field %}
+{% load crispy_forms_filters %}
+{% load tailwind_filters %}
+
+{% load static %}
+{% block content %}
+<!-- seminar_registration.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="flex bg-white rounded-lg mx-2  shadow-lg w-70">
+        <div class="w-1/2 p-8">
+            <h2 class="text-2xl font-bold text-center mb-6">Register for the Seminar</h2>
+
+            <form action="" method="post">
+                {% csrf_token %}
+
+
+                <div class="mb-4">
+                     {{ form|crispy}}
+                </div>
+
+
+                <div class="flex items-center justify-between">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white w-full font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                        Register
+                    </button>
+                </div>
+            </form>
+
+            <!-- Social Media Follow Section -->
+            <div class="mt-8 text-center">
+                <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://www.facebook.com/yourpage" target="_blank" class="text-blue-600 hover:text-blue-800">
+                        <i class="fab fa-facebook-f fa-2x"></i>
+                    </a>
+                    <a href="https://twitter.com/yourpage" target="_blank" class="text-blue-400 hover:text-blue-600">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-1/2 x">
+            <img src="{% static 'img/img.jpg' %}" alt="Seminar Image" class="object-cover h-fit lg:w-48  rounded-r-lg">
+        </div>
+    </div>
+
+</body>
+</html>
+</html>
+{% endblock content %}

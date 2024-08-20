@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load tailwind_filters %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"> <!-- Font Awesome for icons -->
+<!--
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+     <div class="flex flex-col lg:flex-row bg-white rounded-lg shadow-lg w-full max-w-4xl">
+
+        <div class="w-full lg:w-1/2 items-center  ">
+            <img style="" src="{% static 'img/img.jpg' %}" alt="Seminar Image" class="object-center  mx-auto  rounded-b-lg lg:rounded-r-lg lg:rounded-bl-none mx-auto">
+        </div>
+
+        <div class="w-full lg:w-1/2 p-8">
+            <h2 class="text-2xl font-bold text-center mb-6">Register for the Seminar</h2>
+
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="mb-4">
+                     {{ form|crispy }}
+                </div>
+                <!--
+                               <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="id_full_name">Full Name</label>
+
+                    {{ form.full_name }}
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="id_email">Email Address</label>
+
+                    {{ form.email }}
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="id_phone_number">Phone Number</label>
+                        {{ form.phone_number}}
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="id_current_status">Current Status</label>
+
+                    {{ form.current_status}}
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="id_university">University/Colledge</label>
+
+                    {{ form.university}}
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="id_country">Country</label>
+
+                    {{ form.country}}
+                </div>
+
+                <div class="mb-4  w-full">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="publicity_awareness">Publicity</label>
+
+                   <span   class="w-full rounded text-blue-600 " > {{ form.publicity_awareness}}</span>
+                </div>
+
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="id_topic">Current Status</label>
+
+                    {{ form.current_status}}
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="id_topic">Current Status</label>
+
+                    {{ form.current_status}}
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="id_topic">Current Status</label>
+
+                    {{ form.current_status}}
+                </div>
+
+
+
+                <div class="flex items-center justify-between">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 w-full rounded focus:outline-none focus:shadow-outline" type="submit">
+                        Register
+                    </button>
+
+                </div>
+            </form>-->
+<div class="relative py-2 px-6 pt-10 pb-8 max-w-5xl mx-auto    sm:mx-auto sm:rounded-lg lg:w-96  text-center">
+        <span class="text-6xl font-bold text-blue-500 ">Register Now!</span>
+        <!--
+         <div class="inline-flex py-2 ">
+                <p class="text-mx font-medium px-2 text-blue-800">Register Now!</p></span>
+            </div> -->
+    <div class="mt-2 bg-white shadow-md  rounded-lg text-left">
+            <form action="" method="post" class="space-y-6 mb-0">
+                 {% csrf_token %}
+                <div class="h-2 bg-blue-300 rounded-t-md "></div>
+                <div class="px-8 py-6  text-green-300">
+                    {{ form| crispy }}
+                    <div class="flex justify-between mt-4 items-baseline">
+                        <button type="submit" class=" text-xl font-bold hover:bg-blue-600 text-white w-full bg-blue-500 py-1 px-2 rounded-lg" >Register</button>
+                    </div>
+                </div>
+            </form>
+    </div>
+
+            <!-- Social Media Follow Section -->
+            <div class="mt-4 text-center">
+                <h3 class="text-xl font-bold text-blue-400 mb-2">Follow Us</h3>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://www.facebook.com/yourpage" target="_blank" class="text-blue-600 px-5 hover:text-blue-800">
+                        <i class="fab fa-facebook-f fa-2x"></i>
+                    </a>
+                    <a href="https://twitter.com/yourpage" target="_blank" class="text-blue-400 hover:text-blue-600">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!--
+<div class="container mx-auto" 	style="background-image: url('{% static 'img/img.jpg' %}');background-repeat: no-repeat;background-position: 50% 50%;">
+        <div  class="w-full max-w-2xl mx-auto sm:px-6 lg:px-8" >
+            <h1 class="text-4xl mt-4 text-green-300 font-bold mb-8" >Register Now</h1>
+            <form method="POST">
+                     {%csrf_token%}
+                     {{ form|crispy }}
+                <button class="mt-4 w-full bg-green-600 hover:bg-green-400 text-white font-bold  py-2 px-4 rounded-full">Register </button>
+         </form>
+    </div>
+</div>-->
+{% endblock content %}

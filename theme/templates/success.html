@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- seminar/templates/seminar/success.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-gray-100 p-8 rounded-lg shadow-lg text-center">
+        <h2 class="text-2xl font-bold text-green-500 mb-4">Thank You for Registering!</h2>
+        <p class="text-lg font-bold text-gray-600 " >Your registration has been successfully submitted.</p>
+        <a href="{% url 'register' %}" class="mt-4 inline-block bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Register Another</a>
+    </div>
+</body>
+</html>
+{% endblock content %}
